@@ -10,11 +10,11 @@ namespace BugOrderSystem;
 
 class Constant
 {
-    const SYSTEM_NAME = "BugOrderSystem";
+    const SYSTEM_NAME = "BugOrderSystemTest";
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
     const SYSTEM_DOMAIN = "https://845.co.il/";
-    const SYSTEM_SUBFOLDER = "BugOrderSystem/";
+    const SYSTEM_SUBFOLDER = "BugOrderSystemTest/";
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
 
     //Log
