@@ -11,16 +11,16 @@ namespace BugOrderSystem;
 class Constant
 {
     const SYSTEM_NAME = "BugOrderSystem";
-    const WEBMASTER_EMAIL = "";
+    const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
     const SYSTEM_DOMAIN = "https://845.co.il/";
     const SYSTEM_SUBFOLDER = "BugOrderSystem/";
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
 
     //Log
-    const DEFAULT_LOG_DIRECTORY = __DIR__."../Logs/";
-    const DEFAULT_MAX_FILE = 30;
-    const DEFAULT_LOG_NAME = self::SYSTEM_NAME.".log";
+    const LOG_SUBFOLDER = "logs/";
+    const DEFAULT_MAX_FILE = 12;
+    const SYSTEM_LOG_NAME = self::SYSTEM_NAME."_LOG";
 
     //Mysql
     const MYSQL_SERVER = "localhost";
