@@ -14,7 +14,7 @@ class Constant
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
     const SYSTEM_DOMAIN = "https://845.co.il/";
-    const SYSTEM_SUBFOLDER = "BugOrderSystemTest/";
+    const SYSTEM_SUBFOLDER = "BugOrderSystemTest3/";
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
 
     //Log
