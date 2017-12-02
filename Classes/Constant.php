@@ -11,16 +11,25 @@ namespace BugOrderSystem;
 class Constant
 {
     const SYSTEM_NAME = "BugOrderSystemTest";
-    const WEBMASTER_EMAIL = "frizen700@gmail.com";
-
+    const SYSTEM_TIMEZONE = "Asia/Jerusalem";
     const SYSTEM_DOMAIN = "https://845.co.il/";
     const SYSTEM_SUBFOLDER = "BugOrderSystemTest/";
+
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
+    const WEBMASTER_EMAIL = "frizen700@gmail.com";
+
+    const ORDER_STATUS_STYLE = array(
+        2 => array("rgb(0,140,0)",""),
+        3 => array("rgb(0,173,204)",""),
+        4 => array("rgb(150,0,0)","w3-animate-fading"),
+        5 => array("rgb(150,130,50)",""),
+        6 => array("rgb(120,90,200)",""),
+        "default" => array("",""));
 
     //Log
+    const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
     const LOG_SUBFOLDER = "logs/";
-    const DEFAULT_MAX_FILE = 12;
-    const SYSTEM_LOG_NAME = self::SYSTEM_NAME."_LOG";
+    const LOG_DEFAULT_MAX_FILE = 12;
 
     //Mysql
     const MYSQL_SERVER = "localhost";
@@ -57,16 +66,6 @@ EMAIL;
     <br/>
     סניף {ShopName}
 EMAIL;
-
-    const ORDER_STATUS_STYLE = array(
-        2 => array("rgb(0,140,0)",""),
-        3 => array("rgb(0,173,204)",""),
-        4 => array("rgb(150,0,0)","w3-animate-fading"),
-        5 => array("rgb(150,130,50)",""),
-        6 => array("rgb(120,90,200)",""),
-        "default" => array("","")
-);
-
 
 
 }
