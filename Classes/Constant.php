@@ -67,5 +67,46 @@ EMAIL;
     סניף {ShopName}
 EMAIL;
 
+//todo: write summery order.
+    const EMAIL_CLIENT_SUMMERY_ORDER = <<<EMAIL
+<div style="direction: rtl">
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+שלום {ClientName}, <br>
+אנו שמחים כי בחרת להזמין מאיתנו, אנו נעשה את המירב בכדי לספק לך את המוצר בזמן הקצר ביותר. <br>
+
+לינק עבור מעקב אחרי סטאטוס ההזמנה: <br>
+<a href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן</a>
+ <br><br>
+סיכום הזמנתך: <br>
+<ul>
+  <li>   תאריך: {OrderDate} </li><br>
+  <li>   שם המזמין: {ClientName} </li><br>
+  <li>  סניף: {ShopName} </li><br>
+  <li>  כתובת: {Address} </li><br>
+  <li>  מוכר: {Selller} </li><br>
+  <li>  טלפון לבירורים: {PhoneNumber} </li><br>
+</ul>
+מוצרים: <br>
+          <table style="width:25%; border: 1px solid black;">
+                <thead>
+                  <tr>
+                    <th>שם המוצר</th>
+                    <th>כמות</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    {productsList}
+                </tbody>
+          </table>
+<br>
+תודה רבה, <br>
+סניף {ShopName}
+</div>
+EMAIL;
+
 
 }
