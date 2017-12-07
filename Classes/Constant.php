@@ -69,44 +69,38 @@ EMAIL;
 
 //todo: write summery order.
     const EMAIL_CLIENT_SUMMERY_ORDER = <<<EMAIL
-<div style="direction: rtl">
-<style>
-table, th, td {
-    border: 1px solid black;
-}
-</style>
-שלום {ClientName}, <br>
-אנו שמחים כי בחרת להזמין מאיתנו, אנו נעשה את המירב בכדי לספק לך את המוצר בזמן הקצר ביותר. <br>
+<div style="direction: rtl; font-family: arial, sans-serif;">
+<div style="background: rgba(211,255,241,0.2); padding: 20px">
+    <h1 style="font-style: italic">שלום {ClientName}, </h1>
+    <h2 style="color: #555555"> אנו שמחים כי בחרת להזמין מאיתנו, אנו נעשה את מירב המאמצים בכדי לספק לך את המוצר בזמן הקצר ביותר.</h2>
+    <h2>צרפנו עבורך סיכום ודף מעקב אחר ההזמנה:</h2>
+</div>
+<div style="background: rgba(254,254,209,0.22)">
+     <br><br>
+    <span style="font-size: 18px; padding: 10px;"> סיכום הזמנתך: </span><br>
+    <ul style="list-style-type: none; font-size: 18px">
+      <li>  <b>מספר הזמנה:</b> {OrderId} </li><br>
+      <li>  <b>תאריך:</b> {OrderDate} </li><br>
+      <li>  <b>שם המזמין:</b>  {ClientName} </li><br>
+      <li>  <b>סניף:</b>  {ShopName} </li><br>
+      <li>  <b>כתובת:</b>  {Address} </li><br>
+      <li>  <b>מוכר:</b>  {Seller} </li><br>
+      <li>  <b>טלפון לבירורים:</b> {PhoneNumber} </li><br>
+    </ul>
 
-לינק עבור מעקב אחרי סטאטוס ההזמנה: <br>
-<a href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן</a>
- <br><br>
-סיכום הזמנתך: <br>
-<ul>
-  <li>   תאריך: {OrderDate} </li><br>
-  <li>   שם המזמין: {ClientName} </li><br>
-  <li>  סניף: {ShopName} </li><br>
-  <li>  כתובת: {Address} </li><br>
-  <li>  מוכר: {Selller} </li><br>
-  <li>  טלפון לבירורים: {PhoneNumber} </li><br>
-</ul>
-מוצרים: <br>
-          <table style="width:25%; border: 1px solid black;">
-                <thead>
-                  <tr>
-                    <th>שם המוצר</th>
-                    <th>כמות</th>
-                  </tr>
-                </thead>
-                  <tbody>
-                    {productsList}
-                </tbody>
-          </table>
-<br>
-תודה רבה, <br>
-סניף {ShopName}
+    <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בסטאטוס ההזמנה</a>
+
+    <div style="font-size: 18px; padding: 10px;">
+    <br>
+    תודה רבה, <br>
+    סניף {ShopName}</div>
+    </div>
 </div>
 EMAIL;
+
+
+
+
 
 
 }
