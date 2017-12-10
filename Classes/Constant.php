@@ -67,33 +67,20 @@ EMAIL;
     סניף {ShopName}
 EMAIL;
 
-//todo: write summery order.
     const EMAIL_CLIENT_SUMMERY_ORDER = <<<EMAIL
-<div style="direction: rtl; font-family: arial, sans-serif;">
-<div style="background: rgba(211,255,241,0.2); padding: 20px">
-    <h1 style="font-style: italic">שלום {ClientName}, </h1>
-    <h2 style="color: #555555"> אנו שמחים כי בחרת להזמין מאיתנו, אנו נעשה את מירב המאמצים בכדי לספק לך את המוצר בזמן הקצר ביותר.</h2>
-    <h2>צרפנו עבורך סיכום ודף מעקב אחר ההזמנה:</h2>
-</div>
-<div style="background: rgba(254,254,209,0.22)">
-     <br><br>
-    <span style="font-size: 18px; padding: 10px;"> סיכום הזמנתך: </span><br>
-    <ul style="list-style-type: none; font-size: 18px">
-      <li>  <b>מספר הזמנה:</b> {OrderId} </li><br>
-      <li>  <b>תאריך:</b> {OrderDate} </li><br>
-      <li>  <b>שם המזמין:</b>  {ClientName} </li><br>
-      <li>  <b>סניף:</b>  {ShopName} </li><br>
-      <li>  <b>כתובת:</b>  {Address} </li><br>
-      <li>  <b>מוכר:</b>  {Seller} </li><br>
-      <li>  <b>טלפון לבירורים:</b> {PhoneNumber} </li><br>
-    </ul>
-
-    <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בסטאטוס ההזמנה</a>
-
-    <div style="font-size: 18px; padding: 10px;">
-    <br>
-    תודה רבה, <br>
-    סניף {ShopName}</div>
+<div style="direction: rtl; font-family: arial, sans-serif; background: linear-gradient(to right, #f2fcfe, #f2fcfe); /*Standard*/">
+    <div style="padding: 20px">
+        <h1 style="font-style: italic">שלום {ClientName}, </h1>
+        <h2 style="color: #555555"> אנו שמחים כי בחרת להזמין מאיתנו, אנו נעשה את מירב המאמצים בכדי לספק לך את המוצר בזמן הקצר ביותר.</h2>
+        <h2 style="padding: 20px 20px 0 0 ;">צרפנו עבורך סיכום ודף מעקב אחר ההזמנה:</h2>
+         <br><br>
+    
+        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
+    
+        <div style="font-size: 18px; padding: 0 20px 20px 0;">
+        <br>
+        תודה רבה, <br>
+        סניף {ShopName}</div>
     </div>
 </div>
 EMAIL;
