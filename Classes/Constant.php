@@ -18,6 +18,8 @@ class Constant
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
+    //Orders
+    const ORDER_MAX_QUANTITY = 100;
     const ORDER_STATUS_STYLE = array(
         2 => array("rgb(0,140,0)",""),
         3 => array("rgb(0,173,204)",""),
@@ -25,6 +27,8 @@ class Constant
         5 => array("rgb(150,130,50)",""),
         6 => array("rgb(120,90,200)",""),
         "default" => array("",""));
+
+    const ORDER_ALERT_DAYS_REGION = 14;
 
     //Log
     const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
@@ -84,10 +88,5 @@ EMAIL;
     </div>
 </div>
 EMAIL;
-
-
-
-
-
 
 }
