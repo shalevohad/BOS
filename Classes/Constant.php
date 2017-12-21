@@ -34,7 +34,7 @@ class Constant
     const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
     const LOG_SUBFOLDER = "logs/";
     const LOG_DEFAULT_MAX_FILE = 12;
-    const LOG_LOGGLY_TOKEN = "057c12ef-926c-4345-bb64-e862bab4ee3b";
+    const LOG_LOGGLY_TOKEN = "5ab1b876-ffde-450d-9ba8-c13f545c23b3";
 
     //Mysql
     const MYSQL_SERVER = "localhost";
