@@ -18,7 +18,7 @@ class Constant
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
-    //Orders
+    //Orders && Products
     const ORDER_MAX_QUANTITY = 100;
     const ORDER_STATUS_STYLE = array(
         2 => array("rgb(0,140,0)",""),
@@ -27,8 +27,17 @@ class Constant
         5 => array("rgb(150,130,50)",""),
         6 => array("rgb(120,90,200)",""),
         "default" => array("",""));
-
     const ORDER_ALERT_DAYS_REGION = 14;
+    const ORDER_PRODUCT_STATUS_TO_ORDER_STATUS_MAP = array(
+        "Created" => "Open",
+        "Pre_order" => "Pre_order",
+        "Ordered" => "Ordered",
+        "Enroute" => "Enroute",
+        "Arrived" => "Arrived",
+        "Client_Informed" => "Client_Informed",
+        "Delivered" => "Delivered",
+        "Aborted" => "Aborted"
+    );
 
     //Log
     const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
