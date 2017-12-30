@@ -10,10 +10,11 @@ namespace BugOrderSystem;
 
 class Constant
 {
-    const SYSTEM_NAME = "BugOrderSystemTest";
+    const SYSTEM_TEST_OR_EMPTY = "Test";
+    const SYSTEM_NAME = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ;
     const SYSTEM_TIMEZONE = "Asia/Jerusalem";
     const SYSTEM_DOMAIN = "https://845.co.il/";
-    const SYSTEM_SUBFOLDER = "BugOrderSystemTest/";
+    const SYSTEM_SUBFOLDER = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ."/";
 
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
@@ -101,7 +102,7 @@ EMAIL;
         <h2 style="padding: 20px 20px 0 0 ;">צרפנו עבורך סיכום ודף מעקב אחר ההזמנה:</h2>
          <br><br>
     
-        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
+        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bug.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
     
         <div style="font-size: 18px; padding: 0 20px 20px 0;">
         <br>
