@@ -14,6 +14,8 @@ class Constant
     const SYSTEM_NAME = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ;
     const SYSTEM_TIMEZONE = "Asia/Jerusalem";
     const SYSTEM_DOMAIN = "https://845.co.il/";
+    const SYSTEM_LOCAL_ABSOLUTE_PATH = "/home/coil1212";
+    const SYSTEM_WEBHOST_ROOT_DIRECTORY = "/public_html";
     const SYSTEM_SUBFOLDER = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ."/";
 
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
@@ -56,14 +58,11 @@ class Constant
     const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
     const LOG_SUBFOLDER = "logs/";
     const LOG_DEFAULT_MAX_FILE = 12;
-    const LOG_LOGGLY_TOKEN = "5ab1b876-ffde-450d-9ba8-c13f545c23b3";
 
     //Mysql
     const MYSQL_SERVER = "localhost";
     const MYSQL_SERVER_PORT = 3306;
     const MYSQL_DATABASE = "coil1212_bug";
-    const MYSQL_DATABASE_USERNAME = "coil1212_bug";
-    const MYSQL_DATABASE_PASSWORD = "Bug946394";
 
     //Email Template's
     const EMAIL_SHOP_NEED_TO_ORDER = <<<EMAIL
