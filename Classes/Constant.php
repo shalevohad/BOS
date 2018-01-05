@@ -21,7 +21,7 @@ class Constant
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
-    //Orders && Products
+    //Orders && Products//
     const ORDER_MAX_QUANTITY = 100;
     const ORDER_STATUS_STYLE = array(
         2 => array("color: rgb(0,140,0)",""),
