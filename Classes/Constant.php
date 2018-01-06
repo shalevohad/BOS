@@ -21,9 +21,13 @@ class Constant
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
+    //Products
+    const PRODUCT_MAX_QUANTITY = 100;
+
     //Orders && Products
     const ORDER_MAX_QUANTITY = 100;
     const ORDER_STATUS_STYLE = array(
+        1 => array("", ""),
         2 => array("color: rgb(0,140,0)",""),
         3 => array("color: rgb(0,173,204)",""),
         4 => array("color: rgb(150,0,0)","w3-animate-fading"),
@@ -31,16 +35,19 @@ class Constant
         6 => array("color: rgb(120,90,200)",""),
         7 => array("",""),
         8 => array("",""),
-        "default" => array("",""));
+        "default" => array("", "")
+    );
 
     const PRODUCTS_STATUS_STYLE = array(
+        1 => array("", ""),
         2 => array("",""),
         3 => array("color: rgb(0,140,0)",""),
         4 => array("color: rgb(0,173,204)",""),
         5 => array("color: rgb(150,0,0)","table-success"),
         6 => array("color: rgb(120,90,200)",""),
         7 => array("text-decoration: line-through",""),
-        "default" => array("",""));
+        "default" => array("", "")
+    );
 
     const ORDER_ALERT_DAYS_REGION = 14;
     const ORDER_PRODUCT_STATUS_TO_ORDER_STATUS_MAP = array(
