@@ -23,9 +23,18 @@ class Constant
 
     //Products
     const PRODUCT_MAX_QUANTITY = 100;
+    const PRODUCTS_STATUS_STYLE = array(
+        1 => array("", ""),
+        2 => array("",""),
+        3 => array("color: rgb(0,140,0)",""),
+        4 => array("color: rgb(0,173,204)",""),
+        5 => array("color: rgb(150,0,0)","table-success"),
+        6 => array("color: rgb(120,90,200)",""),
+        7 => array("text-decoration: line-through",""),
+        "default" => array("", "")
+    );
 
     //Orders && Products
-    const ORDER_MAX_QUANTITY = 100;
     const ORDER_STATUS_STYLE = array(
         1 => array("", ""),
         2 => array("color: rgb(0,140,0)",""),
@@ -35,17 +44,6 @@ class Constant
         6 => array("color: rgb(120,90,200)",""),
         7 => array("",""),
         8 => array("",""),
-        "default" => array("", "")
-    );
-
-    const PRODUCTS_STATUS_STYLE = array(
-        1 => array("", ""),
-        2 => array("",""),
-        3 => array("color: rgb(0,140,0)",""),
-        4 => array("color: rgb(0,173,204)",""),
-        5 => array("color: rgb(150,0,0)","table-success"),
-        6 => array("color: rgb(120,90,200)",""),
-        7 => array("text-decoration: line-through",""),
         "default" => array("", "")
     );
 
