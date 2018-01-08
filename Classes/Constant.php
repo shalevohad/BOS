@@ -10,6 +10,7 @@ namespace BugOrderSystem;
 
 class Constant
 {
+    const SYSTEM_DEBUG = True;
     const SYSTEM_TEST_OR_EMPTY = "Test";
     const SYSTEM_NAME = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ;
     const SYSTEM_TIMEZONE = "Asia/Jerusalem";
@@ -22,15 +23,16 @@ class Constant
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
     //Products
-    const PRODUCT_MAX_QUANTITY = 100;
+    const PRODUCT_MAX_QUANTITY = 10;
     const PRODUCTS_STATUS_STYLE = array(
-        1 => array("", ""),
+        1 => array("",""),
         2 => array("",""),
         3 => array("color: rgb(0,140,0)",""),
         4 => array("color: rgb(0,173,204)",""),
         5 => array("color: rgb(150,0,0)","table-success"),
         6 => array("color: rgb(120,90,200)",""),
         7 => array("text-decoration: line-through",""),
+        8 => array("",""),
         "default" => array("", "")
     );
 
