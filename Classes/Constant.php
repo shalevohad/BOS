@@ -23,7 +23,7 @@ class Constant
     const WEBMASTER_EMAIL = "frizen700@gmail.com";
 
     //Products
-    const PRODUCT_MAX_QUANTITY = 10;
+    const PRODUCT_MAX_QUANTITY = 100;
     const PRODUCTS_STATUS_STYLE = array(
         1 => array("",""),
         2 => array("",""),
