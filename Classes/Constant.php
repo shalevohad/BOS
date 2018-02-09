@@ -12,6 +12,7 @@ class Constant
 {
     const SYSTEM_DEBUG = True;
     const SYSTEM_TEST_OR_EMPTY = "Test";
+    const SYSTEM_VERSION = "2.1";
     const SYSTEM_NAME = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ;
     const SYSTEM_TIMEZONE = "Asia/Jerusalem";
     const SYSTEM_DOMAIN = "https://845.co.il/";
