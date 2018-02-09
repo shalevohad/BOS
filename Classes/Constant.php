@@ -72,6 +72,8 @@ class Constant
     const MYSQL_DATABASE = "coil1212_bug";
 
     //Email Template's
+    const EMAIL_SYSTEM_EMAIL = "OrderSystem@bug.co.il";
+    const EMAIL_SYSTEM_NAME = "Bug_Order_System(BoS) No-Reply";
     const EMAIL_SHOP_NEED_TO_ORDER = <<<EMAIL
     שלום <span style="">{Name}</span>,<br/>
     <br/>
