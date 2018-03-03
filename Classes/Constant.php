@@ -10,9 +10,9 @@ namespace BugOrderSystem;
 
 class Constant
 {
-    const SYSTEM_DEBUG = True;
+    const SYSTEM_DEBUG = False;
     const SYSTEM_TEST_OR_EMPTY = "Test";
-    const SYSTEM_VERSION = "2.1";
+    const SYSTEM_VERSION = "2.2";
     const SYSTEM_NAME = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ;
     const SYSTEM_TIMEZONE = "Asia/Jerusalem";
     const SYSTEM_DOMAIN = "https://845.co.il/";
@@ -108,8 +108,27 @@ EMAIL;
     <div style="padding: 20px">
         <h1 style="font-style: italic">שלום {ClientName}, </h1>
         <h2 style="color: #555555"> אנו שמחים כי בחרת להזמין מאיתנו, אנו נעשה את מירב המאמצים בכדי לספק לך את המוצר בזמן הקצר ביותר.</h2>
-        <h2 style="padding: 20px 20px 0 0 ;">צרפנו עבורך סיכום ודף מעקב אחר ההזמנה:</h2>
-         <br><br>
+        <h2 style="padding: 20px 20px 0 0 ;">צרפנו עבורך סיכום ודף מעקב אחר ההזמנה ({OrderId}):</h2>
+        <table style="padding-top: 12px;
+                        padding-bottom: 12px;
+                        text-align: center;
+                        border: 1px solid #ddd;
+                        border-collapse: collapse;
+                        width: 95%;
+                        direction: rtl;
+                        ">
+          <thead>
+            <tr style="font-size: 20px; background-color: #af574d; color: white;">
+              <th scope="col"></th>
+              <th scope="col">מוצר</th>
+              <th scope="col">כמות</th>
+            </tr>
+          </thead>
+          <tbody>
+            {OrderProductSummary}
+          </tbody>
+        </table>
+        <br><br>
     
         <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bug.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
     
@@ -120,5 +139,14 @@ EMAIL;
     </div>
 </div>
 EMAIL;
+
+    const EMAIL_CLIENT_SUMMERY_ORDER_TABLE = <<<EMAIL
+    <tr>
+      <th scope="row">{number}</th>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{productName}</td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{productQuantity}</td>
+    </tr>
+EMAIL;
+
 
 }
