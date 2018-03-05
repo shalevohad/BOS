@@ -130,7 +130,7 @@ EMAIL;
         </table>
         <br><br>
     
-        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bug.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
+        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
     
         <div style="font-size: 18px; padding: 0 20px 20px 0;">
         <br>
