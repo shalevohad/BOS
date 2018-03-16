@@ -32,8 +32,8 @@ class Constant
         4 => array("color: rgb(0,173,204)",""),
         5 => array("color: rgb(150,0,0)","table-success"),
         6 => array("color: rgb(120,90,200)",""),
-        7 => array("text-decoration: line-through",""),
-        8 => array("",""),
+        7 => array("color: #5EC14C; text-decoration: line-through",""),
+        8 => array("color: rgb(255,0,0); text-decoration: line-through;",""),
         "default" => array("", "")
     );
 
@@ -66,6 +66,22 @@ class Constant
     const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
     const LOG_SUBFOLDER = "logs/";
     const LOG_DEFAULT_MAX_FILE = 12;
+    const LOG_MESSAGE_TYPE_PROPERTY_MAP = array(
+        "default" => "",
+        "ERROR" => "table-danger"
+    );
+    /**
+     * @param string $messageType
+     * @return string
+     */
+    public static function GetMessageRowClass(string $messageType) {
+        if (array_key_exists($messageType, self::LOG_MESSAGE_TYPE_PROPERTY_MAP))
+            $outputProperty = "class = ".self::LOG_MESSAGE_TYPE_PROPERTY_MAP[$messageType];
+        else
+            $outputProperty = self::LOG_MESSAGE_TYPE_PROPERTY_MAP['default'];
+
+        return $outputProperty;
+    }
 
     //Mysql
     const MYSQL_SERVER = "localhost";
