@@ -25,6 +25,7 @@ class Constant
 
     //Products
     const PRODUCT_MAX_QUANTITY = 100;
+    const PRODUCTS_BARCODE_ONLY_INT = false;
     const PRODUCTS_STATUS_STYLE = array(
         1 => array("",""),
         2 => array("",""),
@@ -38,6 +39,7 @@ class Constant
     );
 
     //Orders && Products
+    const ORDER_ALERT_DAYS_REGION = 7;
     const ORDER_STATUS_STYLE = array(
         1 => array("", ""),
         2 => array("color: rgb(0,140,0)",""),
@@ -49,8 +51,6 @@ class Constant
         8 => array("",""),
         "default" => array("", "")
     );
-
-    const ORDER_ALERT_DAYS_REGION = 14;
     const ORDER_PRODUCT_STATUS_TO_ORDER_STATUS_MAP = array(
         "Created" => "Open",
         "Pre_order" => "Pre_order",
@@ -91,13 +91,42 @@ class Constant
     //Email Template's
     const EMAIL_SYSTEM_EMAIL = "OrderSystem@bug.co.il";
     const EMAIL_SYSTEM_NAME = "Bug_Order_System(BoS) No-Reply";
+
+    //TODO: Need to change text
     const EMAIL_SHOP_NEED_TO_ORDER = <<<EMAIL
-    שלום <span style="">{Name}</span>,<br/>
+    שלום <span style="">{ShopName}</span>,<br/>
     <br/>
-   הזמנה מספר <span style="font-weight: bold;">{OrderID}</span> על שם <span style="">{ClientName}</span>,<Br/>
-   של המוכר  <span style="">{SellerName}</span> אשר נפתחה אתמול, עדיין לא הוזמנה.<br/>
-   <br/>
-   נא לדאוג להזמינה בהקדם!
+    <h2>קיימות מספר הזמנות פתוחות מתעכבות:</h2>
+    <table style="padding-top: 12px;
+                        padding-bottom: 12px;
+                        text-align: center;
+                        border: 1px solid #ddd;
+                        border-collapse: collapse;
+                        width: 95%;
+                        direction: rtl;
+                        ">
+          <thead>
+            <tr style="font-size: 20px; background-color: #af574d; color: white;">
+              <th scope="col"></th>
+              <th scope="col">מספר הזמנה</th>
+              <th scope="col">זמן עדכון אחרון</th>
+              <th scope="col">מוכרן</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ShopOrdersList}
+          </tbody>
+        </table>
+        <br><br>
+   נא לדאוג להזמינם בהקדם! 
+EMAIL;
+    const EMAIL_SHOP_NEED_TO_ORDER_TABLE = <<<EMAIL
+    <tr>
+      <th scope="row">{number}</th>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{orderNumber}</td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{lastUpdateTime}</td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{sellerName}</td>
+    </tr>
 EMAIL;
 
     const EMAIL_SELLER_NEED_TO_ORDER = <<<EMAIL
