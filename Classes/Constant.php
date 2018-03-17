@@ -93,10 +93,10 @@ class Constant
     const EMAIL_SYSTEM_NAME = "Bug_Order_System(BoS) No-Reply";
 
     //TODO: Need to change text
-    const EMAIL_SHOP_NEED_TO_ORDER = <<<EMAIL
+    const EMAIL_SHOP_ORDERS_NEED_ATTENTION = <<<EMAIL
     שלום <span style="">{ShopName}</span>,<br/>
     <br/>
-    <h2>קיימות מספר הזמנות פתוחות מתעכבות:</h2>
+    <h2>קיימות מספר הזמנות אשר מצריכות תשומת לב:</h2>
     <table style="padding-top: 12px;
                         padding-bottom: 12px;
                         text-align: center;
@@ -118,12 +118,12 @@ class Constant
           </tbody>
         </table>
         <br><br>
-   נא לדאוג להזמינם בהקדם! 
+   נא לדאוג לטפלם בהקדם! 
 EMAIL;
-    const EMAIL_SHOP_NEED_TO_ORDER_TABLE = <<<EMAIL
+    const EMAIL_SHOP_ORDERS_NEED_ATTENTION_TABLE = <<<EMAIL
     <tr>
       <th scope="row">{number}</th>
-      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{orderNumber}</td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{orderId}</td>
       <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{lastUpdateTime}</td>
       <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{sellerName}</td>
     </tr>
