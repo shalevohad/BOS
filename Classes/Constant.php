@@ -37,6 +37,9 @@ class Constant
         8 => array("color: rgb(255,0,0); text-decoration: line-through;",""),
         "default" => array("", "")
     );
+    const PRODUCTS_STATUS_NOT_SELECTABLE = array(
+        "Message_Sent"
+    );
 
     //Orders && Products
     const ORDER_ALERT_DAYS_REGION = 7;
@@ -57,6 +60,7 @@ class Constant
         "Ordered" => "Ordered",
         "Enroute" => "Enroute",
         "Arrived" => "Arrived",
+        "Message_Sent" => "Arrived",
         "Client_Informed" => "Client_Informed",
         "Delivered" => "Delivered",
         "Aborted" => "Aborted"
@@ -93,6 +97,10 @@ class Constant
     const EMAIL_SYSTEM_NAME = "Bug_Order_System(BoS) No-Reply";
 
     //TODO: Need to change text
+    const EMAIL_CLIENT_PRODUCT_ARRIVED = <<<EMAIL
+    
+EMAIL;
+
     const EMAIL_SHOP_ORDERS_NEED_ATTENTION = <<<EMAIL
     שלום <span style="">{ShopName}</span>,<br/>
     <br/>
