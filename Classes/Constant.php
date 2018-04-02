@@ -98,7 +98,39 @@ class Constant
 
     //TODO: Need to change text
     const EMAIL_CLIENT_PRODUCT_ARRIVED = <<<EMAIL
-    
+    שלום <span style="">{Name}</span>,<br/>
+    <br/>
+    <h2>אנו שמחים להודיעך כי הפריטים הבאים מהזמנה {OrderNumber} הגיעו לסניף {ShopName} וממתינים לאיסוף:</h2>
+    <table style="padding-top: 12px;
+                        padding-bottom: 12px;
+                        text-align: center;
+                        border: 1px solid #ddd;
+                        border-collapse: collapse;
+                        width: 95%;
+                        direction: rtl;
+                        ">
+          <thead>
+            <tr style="font-size: 20px; background-color: #af574d; color: white;">
+              <th scope="col"></th>
+              <th scope="col">פריט</th>
+              <th scope="col">כמות</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ClientOrdersList}
+          </tbody>
+        </table>
+        <br>
+        בברכה,<Br/>
+        <br/>
+        סניף {ShopName}
+EMAIL;
+    const EMAIL_CLIENT_PRODUCT_ARRIVED_TABLE = <<<EMAIL
+    <tr>
+      <th scope="row">{Number}</th>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{ProductName}</td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-size: 16px;">{Quantity}</td>
+    </tr>
 EMAIL;
 
     const EMAIL_SHOP_ORDERS_NEED_ATTENTION = <<<EMAIL
