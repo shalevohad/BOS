@@ -35,6 +35,7 @@ class Constant
         6 => array("color: rgb(120,90,200)",""),
         7 => array("color: #5EC14C; text-decoration: line-through",""),
         8 => array("color: rgb(255,0,0); text-decoration: line-through;",""),
+        10 => array("color: #e68a00;",""),
         "default" => array("", "")
     );
     const PRODUCTS_STATUS_NOT_SELECTABLE = array(
@@ -124,6 +125,8 @@ class Constant
         בברכה,<Br/>
         <br/>
         סניף {ShopName}
+
+        <img src='{serverLoc}Mailchecker.php/?orderId={OrderNumber}'>
 EMAIL;
     const EMAIL_CLIENT_PRODUCT_ARRIVED_TABLE = <<<EMAIL
     <tr>
