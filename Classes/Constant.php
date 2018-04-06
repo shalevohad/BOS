@@ -90,8 +90,18 @@ class Constant
 
     //Mysql
     const MYSQL_SERVER = "localhost";
+    const MYSQL_PROTOCOL = "tcp";
     const MYSQL_SERVER_PORT = 3306;
     const MYSQL_DATABASE = "coil1212_bug";
+
+    //DB Backup
+    const DB_CLASS_DIR = self::SYSTEM_LOCAL_ABSOLUTE_PATH.self::SYSTEM_WEBHOST_ROOT_DIRECTORY.'/'.self::SYSTEM_SUBFOLDER."DbBackups/";
+    const DB_BACKUP_DIR = self::DB_CLASS_DIR;
+    const DB_BACKUP_FILES = 14;
+    const DB_BACKUP_COMPRESSION = ""; // gzip, bzip2, etc
+    const DB_BACKUP_DBS = array(
+        self::MYSQL_DATABASE
+    );
 
     //Email Template's
     const EMAIL_SYSTEM_EMAIL = "OrderSystem@bug.co.il";
