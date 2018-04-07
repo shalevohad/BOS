@@ -21,7 +21,7 @@ class Constant
     const SYSTEM_SUBFOLDER = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ."/";
 
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
-    const WEBMASTER_EMAIL = "frizen700@gmail.com";
+    const WEBMASTER_EMAIL = array("frizen700@gmail.com", "shalev.ohad@gmail.com");
 
     //Products
     const PRODUCT_MAX_QUANTITY = 100;
