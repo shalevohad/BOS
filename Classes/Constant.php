@@ -10,15 +10,19 @@ namespace BugOrderSystem;
 
 class Constant
 {
-    const SYSTEM_DEBUG = False;
-    const SYSTEM_TEST_OR_EMPTY = "Test";
-    const SYSTEM_VERSION = "2.2";
-    const SYSTEM_NAME = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ;
+    const SYSTEM_DEBUG = false;
+    /*
+     * Oper: Operational Website
+     * Test: Development Website for testing
+     */
+    const SYSTEM_TEST_OR_OPER = "Test";
+    const SYSTEM_VERSION = "2.3";
+    const SYSTEM_NAME = "BugOrderSystem_".self::SYSTEM_TEST_OR_OPER ;
     const SYSTEM_TIMEZONE = "Asia/Jerusalem";
-    const SYSTEM_DOMAIN = "https://845.co.il/";
+    const SYSTEM_DOMAIN = "https://845.co.il/Bug/";
     const SYSTEM_LOCAL_ABSOLUTE_PATH = "/home/coil1212";
     const SYSTEM_WEBHOST_ROOT_DIRECTORY = "/public_html";
-    const SYSTEM_SUBFOLDER = "BugOrderSystem".self::SYSTEM_TEST_OR_EMPTY ."/";
+    const SYSTEM_SUBFOLDER = self::SYSTEM_TEST_OR_OPER ."/";
 
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = array("frizen700@gmail.com", "shalev.ohad@gmail.com");
@@ -96,7 +100,7 @@ class Constant
 
     //DB Backup
     const DB_CLASS_DIR = self::SYSTEM_LOCAL_ABSOLUTE_PATH.self::SYSTEM_WEBHOST_ROOT_DIRECTORY.'/'.self::SYSTEM_SUBFOLDER."DbBackups/";
-    const DB_BACKUP_DIR = self::DB_CLASS_DIR;
+    const DB_BACKUP_DIR = self::SYSTEM_LOCAL_ABSOLUTE_PATH.'/DB-backups/';
     const DB_BACKUP_FILES = 14;
     const DB_BACKUP_COMPRESSION = ""; // gzip, bzip2, etc
     const DB_BACKUP_DBS = array(
@@ -228,7 +232,7 @@ EMAIL;
         </table>
         <br><br>
     
-        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://bugtest.845.co.il/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
+        <a style="text-decoration: none; font-size: 24px; padding-right: 20px" href="https://845.co.il/Bug/Oper/statuscheck.php/?id={StatusCheckURL}">לחץ כאן לצפייה בהזמנה.</a>
     
         <div style="font-size: 18px; padding: 0 20px 20px 0;">
         <br>
