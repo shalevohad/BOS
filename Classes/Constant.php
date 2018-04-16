@@ -22,7 +22,8 @@ class Constant
     const SYSTEM_DOMAIN = "https://845.co.il/";
     const SYSTEM_LOCAL_ABSOLUTE_PATH = "/home/coil1212";
     const SYSTEM_WEBHOST_ROOT_DIRECTORY = "/public_html/";
-    const SYSTEM_SUBFOLDER = "Bug/".self::SYSTEM_TEST_OR_OPER ."/";
+    const SYSTEM_MAIN_SUBFOLDER = "Bug/";
+    const SYSTEM_SUBFOLDER = self::SYSTEM_MAIN_SUBFOLDER . self::SYSTEM_TEST_OR_OPER ."/";
 
     const API_URL = self::SYSTEM_DOMAIN.self::SYSTEM_SUBFOLDER."API_CALLS.php";
     const WEBMASTER_EMAIL = array("frizen700@gmail.com", "shalev.ohad@gmail.com");
@@ -73,7 +74,7 @@ class Constant
 
     //Log
     const LOG_SYSTEM_NAME = self::SYSTEM_NAME."_LOG";
-    const LOG_SUBFOLDER = Constant::SYSTEM_LOCAL_ABSOLUTE_PATH . Constant::SYSTEM_WEBHOST_ROOT_DIRECTORY . Constant::SYSTEM_SUBFOLDER . "logs/";
+    const LOG_SUBFOLDER = Constant::SYSTEM_LOCAL_ABSOLUTE_PATH . Constant::SYSTEM_WEBHOST_ROOT_DIRECTORY . Constant::SYSTEM_MAIN_SUBFOLDER . "Logs/";
     const LOG_DEFAULT_MAX_FILE = 12;
     const LOG_MESSAGE_TYPE_PROPERTY_MAP = array(
         "default" => "",
