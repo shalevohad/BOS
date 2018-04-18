@@ -10,7 +10,7 @@ namespace BugOrderSystem;
 
 class Constant
 {
-    const SYSTEM_DEBUG = false;
+    const SYSTEM_DEBUG = true;
     /*
      * Oper: Operational Website
      * Test: Development Website for testing
@@ -109,7 +109,7 @@ class Constant
     );
 
     //Email Template's
-    const EMAIL_SYSTEM_EMAIL = "OrderSystem@bug.co.il";
+    const EMAIL_SYSTEM_EMAIL = "info@bug.845.co.il";
     const EMAIL_SYSTEM_NAME = "Bug_Order_System(BoS) No-Reply";
 
     //TODO: Need to change text
