@@ -196,6 +196,15 @@ EMAIL;
    נא לדאוג להזמינה בהקדם!
 EMAIL;
 
+    const EMAIL_SHOP_NEED_TO_ORDER = <<<EMAIL
+    שלום <span style="">{Name}</span>,<br/>
+    <br/>
+   הזמנה מספר <span style="font-weight: bold;">{OrderId}</span> על שם <span style="">{ClientName}</span>,<Br/>
+  אשר נפתחה אתמול על ידי {SellerName}, עדיין לא הוזמנה.<br/>
+   <br/>
+   נא לדאוג להזמינה בהקדם!
+EMAIL;
+
     const EMAIL_CLIENT_ORDER_ARRIVED = <<<EMAIL
     שלום {Name},<br/>
     <br/>
