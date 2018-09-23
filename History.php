@@ -74,7 +74,6 @@ $searchArray = array("");
 BugOrderSystem::GetLog();
 $orderMessage = Message::SearchMessage(BugOrderSystem::$logReadHandlers["db"], $searchArray, Constant::LOG_SYSTEM_NAME);
 
-//$orderMessage = Message::SearchMessage(BugOrderSystem::$logReadHandlers["file"], $searchArray);
 if (count($orderMessage) > 0) {
     $rowNum = 1;
     foreach ($orderMessage as $message) {

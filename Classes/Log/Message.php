@@ -87,7 +87,12 @@ class Message
                     break;
 
                 case "context.ip":
-                    $this->ip = new Address($propertyValue);
+                    try {
+                        $this->ip = new Address($propertyValue);
+                    } catch (\Exception $e) {
+                        //TODO: error in the ip - need to resolve
+                        $this->ip = new Address('');
+                    }
                     break;
 
                 case "context.username":
@@ -231,6 +236,7 @@ class Message
      */
     public static function SearchMessage(\ILogRead $handler, array $SearchMessageArray, string $channel = null, \DateTime $fromDate = null, \DateTime $toDate = null) {
         $messageObjects = $handler->Read(0, $fromDate, $toDate);
+        \Services::dump($messageObjects);
         $matchesMessages = array();
         foreach ($messageObjects as $message) {
             if (is_null($channel) || ($channel == $message->GetChannel())) {

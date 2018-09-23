@@ -12,6 +12,13 @@ use Log\ELogLevel;
 
 class Exception extends \Exception
 {
+    /**
+     * Exception constructor.
+     * @param string $message
+     * @param null $dumpVar
+     * @param mixed ...$vars
+     * @throws \Exception
+     */
     public function __construct($message = "", $dumpVar = null, ...$vars) {
         $dumpVarRes = "";
         $trace = debug_backtrace();

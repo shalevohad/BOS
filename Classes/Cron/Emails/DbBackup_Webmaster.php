@@ -50,5 +50,5 @@ try {
 
 } catch(Throwable $e) {
     $logText = $logPrePendText . "הריצה לא הצליחה - אירעה שגיאה כללית {ErrorMessage}";
-    \BugOrderSystem\BugOrderSystem::GetLog()->Write($logText, \Log\ELogLevel::ERROR(), array("ErrorMessage" => $e->getMessage(), "ErrorObject" => $e),false, false);
+    \BugOrderSystem\BugOrderSystem::GetLog()->Write($logText, \Log\ELogLevel::CRITICAL(), array("ErrorMessage" => $e->getMessage(), "ErrorObject" => $e),false, false);
 }

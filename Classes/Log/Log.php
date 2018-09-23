@@ -84,6 +84,7 @@ class Log
 
         $context['username'] = $username;
 
+        //TODO: need to review the ip code with the new chrome update - not working!
         $ipText = "";
         if ($showIp) {
             $ipText = $_SERVER['REMOTE_ADDR'];

@@ -304,7 +304,7 @@ class Shop
             throw new Exception("Unable to send email to {0} email not exist!", null, $this);
 
         $emailObject = BugOrderSystem::GetEmail($subject, $message);
-        $emailObject->addAddress($this->email);
+        $emailObject->addAddress($this->GetEmail());
 
         foreach ($AttachedFiles as $file) {
             if ($file->isFile())
